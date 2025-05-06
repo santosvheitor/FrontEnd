@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #content {
+            margin-top: 20px;
+            font-size: 24px;
+            border: solid 1px red;
+            padding: 20px;
+        }
+        .focused {
+            border: 2px solid blue;
+        }
+        #inputField {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="MultiplyByThree()">Click Me</button>
+    
+    <div id="content"> TBD </div>
+    <input type="text" id="inputField" placeholder="Enter Number" onfocus="onFocus()" onblur="onBlur()">
+
+
+    <button onclick="AddNumbers()">Click Me</button>
+    <input type="text" id="inputFieldNumber1" placeholder="Type First Number" onfocus="onFocus()" onblur="onBlur()">
+
+    <input type="text" id="inputFieldNumber2" placeholder="Type Second Number" onfocus="onFocus()" onblur="onBlur()">
+
+    <script>
+
+        function MultiplyByThree() {
+            var inputField = document.getElementById('inputField');
+            var calculatedValue = parseInt(inputField.value) * 3;
+            document.getElementById('content').innerHTML = calculatedValue;
+        }
+    
+
+        function AddNumbers() {
+            var inputFieldNumber1 = document.getElementById('inputFieldNumber1');
+            var inputFieldNumber2 = document.getElementById('inputFieldNumber2')
+
+
+
+        }
+    </script>
+</body>
+</html>
